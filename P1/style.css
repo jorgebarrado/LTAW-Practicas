@@ -1,0 +1,42 @@
+head{
+    font-family: "Brush Script MT", cursive;
+    font-size: 30px;
+}
+
+#logo-home{
+    width: 100px; 
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 420px;
+}
+
+#logo-pcs{
+    width: 100px; 
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 420px;
+}
+#logo-auriculares{
+    width: 100px; 
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 420px;
+}
+#logo-moviles{
+    width: 100px; 
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 420px;
+}
+#logo-relojes{
+    width: 100px; 
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 420px;
+}
+body {
+    background-color: black;
+    background-size: cover;
+    background-attachment: fixed;
+    
+  }
