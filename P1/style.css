@@ -4,38 +4,20 @@ head{
 }
 
 #logo-home{
-    width: 100px; 
-    height: 100px;
+    width: 29px; 
+    height: 25px;
     margin-left: 20px;
     margin-right: 420px;
 }
 
-#logo-pcs{
-    width: 100px; 
-    height: 100px;
-    margin-left: 20px;
-    margin-right: 420px;
+#productos{
+    width: 2000px; 
+    height:30px;
+    margin-left: 100px;
 }
-#logo-auriculares{
-    width: 100px; 
-    height: 100px;
-    margin-left: 20px;
-    margin-right: 420px;
-}
-#logo-moviles{
-    width: 100px; 
-    height: 100px;
-    margin-left: 20px;
-    margin-right: 420px;
-}
-#logo-relojes{
-    width: 100px; 
-    height: 100px;
-    margin-left: 20px;
-    margin-right: 420px;
-}
+
 body {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     background-size: cover;
     background-attachment: fixed;
     
