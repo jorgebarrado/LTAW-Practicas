@@ -1,5 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Ek+Mukta:200);
+
+
+
 head{
-    font-family: "Brush Script MT", cursive;
+    font-family: "Ek Mukta";
     font-size: 30px;
 }
 
@@ -7,9 +11,13 @@ head{
     width: 29px; 
     height: 25px;
     margin-left: 20px;
-    margin-right: 420px;
+    
 }
-
+#logo-mapple{
+    width: 50px; 
+    height: 25px;
+    
+}
 #productos{
     width: 2000px; 
     height:30px;
@@ -22,3 +30,9 @@ body {
     background-attachment: fixed;
     
   }
+
+  #Barra{
+    text-align:center;
+    background-color:rgba(0, 0, 0);
+    margin: 0px -100px 10px -100px;
+}
