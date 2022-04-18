@@ -1,45 +1,74 @@
-@import url(https://fonts.googleapis.com/css?family=Ek+Mukta:200);
+@font-face{
+    font-family: 'SF Pro Text';
+    src:url(./FontsFree-Net-SFProText-Regular.ttf);
+}
+*{
+    font-family: 'SF Pro Text';
+}
+body{
+    margin: 0;
+}
+
+nav{
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 12px 0 12px 0 ;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul a{
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    margin: 0 40px 0 40px;
+    font-size: 0.9rem;
+}
+
+.icon{
+    width: 40px;
+    height: 20px;
+    background-size: 150% 150%;
+    display: block;
+    background-position: -5px -5px;
 
 
-#logo{
-    width: 150px; 
+}
+
+.pro{
+    width: 120px;
     height: 100px;
-    margin-left: 80px;
-    size: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    background-size: 100% 100%;
+    display: block;
 }
 
-#logo-mapple{
-    width: 100px; 
-    height: 50px;
-}
-#productos{
-    background-color:rgba(159, 159, 159, 0.333);  
-    margin-top: 100px;
-    margin-left: 200px;
-    margin-right: 200px;
-    text-align:center;
-    border-width: 30px;
-    border-radius: 100px;
-}
-#Texto{
-    margin-left: 350px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+.logo{
+    background-image: url(./fotos/logoblanco.png);
 }
 
-body {
-    background-color: rgb(255, 255, 255);
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: "Ek Mukta";
-    font-size: 20px;
+.carro{
+    background-image: url(./fotos/bolsa.png);
+}
+.map{
+    background-image: url(./fotos/pcs.png);
+}
+.texto{
+    display: flex;
+    font-size: 28px;
+    display: flex;
+    margin: 60px 200px 0 200px;
 }
 
-  #Barra{
-    text-align:center;
-    background-color:rgba(0, 0, 0);
-    word-spacing: 50px;
-    
+.t1{
+    color: rgb(0, 0, 0);
+
 }
+
+.t2{
+    color: rgba(119, 119, 119, 0.792);
+}
+
+
