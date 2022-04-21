@@ -2,9 +2,11 @@
     font-family: 'SF Pro Text';
     src:url(./FontsFree-Net-SFProText-Regular.ttf);
 }
+
 *{
     font-family: 'SF Pro Text';
 }
+
 body{
     margin: 0;
 }
@@ -34,15 +36,6 @@ nav ul a{
     background-size: 150% 150%;
     display: block;
     background-position: -5px -5px;
-
-
-}
-
-.pro{
-    width: 120px;
-    height: 100px;
-    background-size: 100% 100%;
-    display: block;
 }
 
 .logo{
@@ -52,35 +45,40 @@ nav ul a{
 .carro{
     background-image: url(./fotos/bolsa.png);
 }
+
 .map{
     background-image: url(./fotos/pcs.png);
 }
+
 .texto{
     display: flex;
     justify-content: center;
-    margin: 200px 40px 200px 40px;
+    margin: 200px 300px 200px 300px;
     
 }
 .titulo{
-    font-size: 48px;
-    margin: 0 0px 0 350px;
+    font-size: 3.5rem;
+    margin: 0 40px 0 40px;
     font-weight: bold;
 
 }
-.ayuda{
-    font-size: 14px;
-    margin: 0 400px 0 100px;
-    display: block;
-    text-align: center;
 
+.ayuda{
+    width: 600px;
+    font-size: 0.9rem;
+    text-align: center;
+    list-style: none;
+    margin: 0 40px 0 40px;
+    
 }
+
 .ayuda a{
     text-decoration: none;
     color: rgb(0, 140, 255);
 }
+
 .t1{
     color: rgb(0, 0, 0);
-
 }
 
 .t2{
@@ -91,7 +89,6 @@ nav ul a{
     text-align: center;
     justify-content: center;
     margin: 100px 350px 100px 350px;
-    
 }
 
 .p1{
