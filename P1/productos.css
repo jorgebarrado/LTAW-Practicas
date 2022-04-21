@@ -46,8 +46,8 @@ nav ul a{
     background-image: url(./fotos/bolsa.png);
 }
 
-.contenido{
-    margin: 200px 300px 0 300px;
+.box{
+    margin: 0px 0px 0 0px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -59,7 +59,10 @@ nav ul a{
     transition: all .3s cubic-bezier(0,0,.5,1);
     background-size: contain;
     text-align: center;
-    font-size: 20px;
+    font-size: 10px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    
 }
 
 .map{
@@ -84,3 +87,18 @@ nav ul a{
     background-repeat: no-repeat;
     background-size: 230%;
 }
+
+.cont{
+    display: flex;
+    margin: 200px 300px 0 300px;
+    justify-content: center;
+}
+
+.t:hover{
+    width: 120%;
+    font-size: 2rem;
+    color: black;
+    background-image: none;
+    
+}
+
