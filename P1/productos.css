@@ -92,7 +92,7 @@ nav ul a{
 
 .cont{
     display: flex;
-    margin: 200px 300px 0 300px;
+    margin: 200px 300px 200px 300px;
     justify-content: center;
 }
 
