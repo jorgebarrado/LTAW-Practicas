@@ -47,22 +47,24 @@ nav ul a{
 }
 
 .box{
+    font-size: 20px;
     margin: 0px 0px 0 0px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     border-radius: 18px;
-    width: 480px;
+    width: 680px;
     height: 500px;
     white-space: normal;
     box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
-    transition: all .3s cubic-bezier(0,0,.5,1);
     background-size: contain;
     text-align: center;
-    font-size: 10px;
     background-position: bottom;
     background-repeat: no-repeat;
-    
+    color: rgba(0, 0, 0, 0);
+    list-style: none;
+    justify-content: left;
+    line-height: 2.5;
 }
 
 .map{
@@ -85,7 +87,7 @@ nav ul a{
     background-image: url(./fotos/mypods\ fondo.jpg);
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: 230%;
+    background-size: 150%;
 }
 
 .cont{
@@ -94,11 +96,15 @@ nav ul a{
     justify-content: center;
 }
 
+
 .t:hover{
-    width: 120%;
-    font-size: 2rem;
     color: black;
-    background-image: none;
-    
+    background-image: none; 
+    width: auto;
+    box-shadow: 2px 4px 12px rgb(0 0 0 /60%);
+}
+
+.blanco{
+    color: rgba(0, 0, 0, 0);
 }
 

@@ -91,9 +91,19 @@ nav ul a{
 .p1{
     margin: 0 40px 0 40px;
     font-size: 1rem;
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 10%);
+    border-radius: 18px;
+    
 }
 
 .prod a{
     text-decoration: none;
     color: rgb(0, 0, 0);
+}
+
+.tr:hover{
+    font-size: 1rem;
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 80%);
+    border-radius: 18px;
+    
 }
