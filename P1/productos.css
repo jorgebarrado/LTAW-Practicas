@@ -56,7 +56,7 @@ nav ul a{
     width: 680px;
     height: 500px;
     white-space: normal;
-    box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+    box-shadow: 0px 0px 22px rgb(0 0 0 / 30%);
     background-size: contain;
     text-align: center;
     background-position: bottom;
@@ -89,7 +89,11 @@ nav ul a{
     background-repeat: no-repeat;
     background-size: 150%;
 }
-
+.error{
+    background-image: url(./fotos/no_cross_close_error_icon_208916.png);
+    background-size: 60%;
+    background-position: bottom;
+}
 .cont{
     display: flex;
     margin: 200px 300px 200px 300px;
@@ -100,7 +104,7 @@ nav ul a{
 .t:hover{
     color: black;
     background-image: none; 
-    width: auto;
+    width: 100%;
     box-shadow: 2px 4px 12px rgb(0 0 0 /60%);
 }
 
