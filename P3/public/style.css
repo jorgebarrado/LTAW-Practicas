@@ -1,0 +1,87 @@
+
+@font-face {
+    font-family: "letra";
+    src: url(letra/FontsFree-Net-SFProText-Regular.ttf);
+}
+
+body{
+    background-color: rgba(0, 255, 255, 0);
+    background-size: cover;
+    text-align: center;
+    margin-top: 70px;
+}
+
+h2{
+    font-family: "letra";
+    font-size: 100px;
+    position: center;
+    font-weight: bold;
+}
+
+#total{
+    background-color: rgba(0, 0, 0, 0.9);
+    border: solid 20px;
+    border-color: rgba(228, 138, 21, 0.664);
+    border-radius: 40px;
+    text-align: center;
+    margin: 100px;
+    font-family: "letra";
+    width: 900px;
+    height: 610px;
+    position: center;
+    box-shadow: 2px 2px 250px rgb(0 0 0 / 100%);
+}
+
+#cuadrado-nick{
+    background-color: rgba(255, 245, 238, 0.60);
+    border-radius: 20px;
+    padding: 5px 0 5px 0 ;
+    margin-left: 180px;
+    margin-right: 180px;
+    width: 550px;
+    height: 130px;
+}
+
+h4{
+    font-size: 25px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+#chat{
+    background-color: rgba(255, 255, 255, 0.7); 
+    border-radius: 15px;
+    padding: 10px 0 10px 0 ;
+    margin-top: 20px;
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-bottom: 25px;
+    width: 700px;
+    height: 400px;
+}
+
+#display{
+    border: solid 5px;
+    border-color: rgba(228, 138, 21, 0.4);
+    margin-left: 57px;
+    margin-right: 57px;
+    padding:10px;
+    font-family: "letra";
+    width: 570px;
+    height: 180px;
+    overflow: auto;
+}
+
+input{
+    border-radius: 10px; 
+    font-family: "letra";
+    text-align: center;
+}
+
+#msg_entry{
+    height: 50px;
+    width: 360px; 
+    text-align: center;
+}
