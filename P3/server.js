@@ -14,7 +14,6 @@ let num_user = 0;
 const tiempo = Date.now();
 const fecha = new Date(tiempo);
 
-
 //-- Establecemos los mensajes a mostrar en el chat
 //-- Para el recurso '/help'
 let help_msg = ("Los comandos soportados son los siguientes:<br>" +
