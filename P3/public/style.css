@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgba(0, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.431);
     background-size: cover;
     text-align: center;
     margin-top: 70px;
@@ -19,27 +19,27 @@ h2{
 }
 
 #total{
-    background-color: rgba(0, 0, 0, 0.9);
-    border: solid 20px;
-    border-color: rgba(228, 138, 21, 0.664);
+    background-color: rgb(255, 255, 255);
+    border: solid 10px;
+    border-color: rgba(255, 0, 0, 0.664);
     border-radius: 40px;
     text-align: center;
     margin: 100px;
     font-family: "letra";
-    width: 900px;
-    height: 610px;
+    width: 1000px;
+    height: 750px;
     position: center;
-    box-shadow: 2px 2px 250px rgb(0 0 0 / 100%);
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 100%);
 }
 
 #cuadrado-nick{
     background-color: rgba(255, 245, 238, 0.60);
     border-radius: 20px;
     padding: 5px 0 5px 0 ;
-    margin-left: 180px;
-    margin-right: 180px;
-    width: 550px;
-    height: 130px;
+    margin-left: 11px;
+    margin-right: 11px;
+    width: auto;
+    height: auto;
 }
 
 h4{
@@ -51,26 +51,29 @@ h3{
 }
 
 #chat{
-    background-color: rgba(255, 255, 255, 0.7); 
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 100%);
     border-radius: 15px;
     padding: 10px 0 10px 0 ;
     margin-top: 20px;
-    margin-left: 110px;
-    margin-right: 110px;
-    margin-bottom: 25px;
-    width: 700px;
-    height: 400px;
+    margin-left: 11px;
+    margin-right: 11px;
+    margin-bottom: 0px;
+    width: auto;
+    height: auto;
 }
 
 #display{
-    border: solid 5px;
-    border-color: rgba(228, 138, 21, 0.4);
-    margin-left: 57px;
-    margin-right: 57px;
+    background-color: rgba(255, 255, 255, 0.679);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.111);
+    border: solid 1px;
+    border-radius: 30px;
+    border-color: rgb(0, 0, 0);
+    margin-left: 10px;
+    margin-right: 10px;
     padding:10px;
     font-family: "letra";
-    width: 570px;
-    height: 180px;
+    width: auto;
+    height: auto;
     overflow: auto;
 }
 
@@ -81,7 +84,7 @@ input{
 }
 
 #msg_entry{
-    height: 50px;
-    width: 360px; 
+    width: auto;
+    height: auto; 
     text-align: center;
 }
