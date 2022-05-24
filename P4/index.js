@@ -56,8 +56,8 @@ electron.ipcRenderer.on('msg_client', (event, message) => {
 
 //------ Mensajes enviados al proceso MAIN ------
 boton.onclick = () => {
-    console.log("Botón apretado!");
+    console.log("Botón apretado");
 
     //-- Enviar mensaje al proceso principal
-    electron.ipcRenderer.invoke('test', ">>> ESTAIS SIENDO OBSERVADOS POR UNA APP");
+    electron.ipcRenderer.invoke('test', "> Mensaje enviado desde Electron");
 };  
