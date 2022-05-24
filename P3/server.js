@@ -4,7 +4,7 @@ const http = require('http');
 const express = require('express');
 const colors = require('colors');
 
-
+//-- Pueto donde tiene que escuchar el servidor 
 const PUERTO = 9090;
 
 //-- Creamos la variable de numero de usuarios conectados
@@ -17,16 +17,16 @@ const fecha = new Date(tiempo);
 //-- Establecemos los mensajes a mostrar en el chat
 //-- Para el recurso '/help'
 let help_msg = ("Los comandos soportados son los siguientes:<br>" +
-                ">>> <b>'/help'</b>: Mostrar los comandos soportados<br>" +
-                ">>> <b>'/list'</b>: Mostrar numero de usuarios conectados<br>" +
-                ">>> <b>'/hello'</b>: El servidor te saluda<br>" +
-                ">>> <b>'/date'</b>: Mostrar la fecha actual<br>");
+                "> <b>'/help'</b>: Mostrar los comandos soportados<br>" +
+                "> <b>'/list'</b>: Mostrar numero de usuarios conectados<br>" +
+                "> <b>'/hello'</b>: El servidor te saluda<br>" +
+                "> <b>'/date'</b>: Mostrar la fecha actual<br>");
 
 //-- Para el recurso '/list'
 let list_msg = ("Número de usuarios conectados: ");
 
 //-- Para el recurso '/hello'
-let hello_msg = ("¡HOLA! Gracias por unirte al chat, espero que disfrutes");
+let hello_msg = ("¡Hola, bienvenido al CHAT WEB!");
 
 //-- Para el recurso '/date'
 let date_msg = ("Fecha actual: <b>" + fecha.toUTCString()+ "</b>");
@@ -35,13 +35,13 @@ let date_msg = ("Fecha actual: <b>" + fecha.toUTCString()+ "</b>");
 let error_msg = ("Comando no reconocido");
 
 //-- Mensaje de Bienvenida
-let bienv_msg = ('>>> ¡Bienvenido al chat!');
+let bienv_msg = ('> ¡Bienvenido, te acabas de conectar al chat web!');
 
 //-- Mensaje de nueva conexión
-let conec_msg = ('>>> Nuevo usuario conectado');
+let conec_msg = ('> Se ha conectado un usuario');
 
 //-- Mensaje fin conexión
-let desc_msg = ('>>> Un usuario ha abandonado el chat');
+let desc_msg = ('> Se ha conectado un usuario');
 
 //-- Crear una nueva aplciacion web
 const app = express();
@@ -71,19 +71,19 @@ app.use(express.static('public'));
 function check_command(msg){
   let data;
   if(msg == '/help'){
-    console.log('>>> Mostrar Comandos soportados');
+    console.log('> Mostrar Comandos soportados');
     data = help_msg;
   }else if(msg == '/list'){
-    console.log('>>> Numero de usuarios conectados');
+    console.log('> Numero de usuarios conectados');
     data = list_msg + num_user;
   }else if(msg == '/hello'){
-    console.log('>>> Servidor  devuelve el saludo');
+    console.log('> Servidor  devuelve el saludo');
     data = hello_msg;
   }else if(msg == '/date'){
-    console.log('>>> Mostrar la fecha');
+    console.log('> Mostrar la fecha');
     data = date_msg;
   }else{
-    console.log('>>> Comando no reconocido');
+    console.log('> Comando no reconocido');
     data = error_msg;
   };
   return(data);
@@ -93,7 +93,7 @@ function check_command(msg){
 //-- Evento: Nueva conexion recibida
 io.on('connect', (socket) => {
   
-  console.log('** NUEVA CONEXIÓN **'.yellow);
+  console.log('* NUEVA CONEXIÓN *'.yellow);
   //-- Incrementamos el numero de usuarios conectados
   num_user += 1;
 
@@ -105,7 +105,7 @@ io.on('connect', (socket) => {
 
   //-- Evento de desconexión
   socket.on('disconnect', function(){
-    console.log('** CONEXIÓN TERMINADA **'.yellow);
+    console.log('* CONEXIÓN FINALIZADA *'.yellow);
     //-- Decrementamos el numero de usuarios conectados
     num_user -= 1;
     //-- Enviar mensaje de desconexión de usuario a todos los usuarios

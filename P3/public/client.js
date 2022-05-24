@@ -2,6 +2,7 @@
 const display = document.getElementById("display");
 const msg_entry = document.getElementById("msg_entry");
 const msg_nick = document.getElementById("nick");
+const usarios = document.getElementById("usarios");
 
 //-- Variable del nickname
 let nickname = 'Desconocido';
@@ -9,20 +10,12 @@ let nickname = 'Desconocido';
 //-- Variable que muestra si se escribe
 let user_write = false;
 
-//-- Cargar sonido
-let silbido = new Audio('silbido.mp3');
-
 //-- Crear un websocket. Se establece la conexión con el servidor
 const socket = io();
-
 
 //-- Evento message
 socket.on("message", (msg)=>{
   display.innerHTML += '<p style="color:black">' + msg + '</p>';
-  if(!msg.includes('esta escribiendo...')){
-    //-- Sonar cuando el mensaje sea distinto a estar escribiendo
-    silbido.play();
-  }
 });
 
 //-- Al apretar el botón se envía un mensaje al servidor
