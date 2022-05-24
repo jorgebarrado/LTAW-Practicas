@@ -42,7 +42,7 @@ let bienv_msg = ('> ¡Bienvenido, te acabas de conectar al chat web!');
 let conec_msg = ('> Se ha conectado un usuario');
 
 //-- Mensaje fin conexión
-let desc_msg = ('> Se ha conectado un usuario');
+let desc_msg = ('> Se ha desconectado un usuario');
 
 //-- Crear una nueva aplciacion web
 const app = express();
