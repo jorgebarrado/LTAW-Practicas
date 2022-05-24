@@ -1,33 +1,63 @@
+//-- Es el proceso de renderizado
+
 const electron = require('electron');
+const qrcode = require('qrcode');
 
 console.log("Hola desde el proceso de la web...");
 
 //-- Obtener elementos de la interfaz
-const btn_test = document.getElementById("btn_test");
-const display = document.getElementById("display");
-const info1 = document.getElementById("info1");
-const info2 = document.getElementById("info2");
-const info3 = document.getElementById("info3");
-const print = document.getElementById("print");
-
-//-- Acceder a la API de node para obtener la info
-//-- Sólo es posible si nos han dado permisos desde
-//-- el proceso princpal
-info1.textContent = process.arch;
-info2.textContent = process.platform;
-info3.textContent = process.cwd();
+const v_node = document.getElementById("info1");
+const v_chrome = document.getElementById("info2");
+const v_electron = document.getElementById("info3");
+const archi = document.getElementById("info4");
+const plataf = document.getElementById("info5");
+const direct = document.getElementById("info6");
+const num_usuarios = document.getElementById("users");
+const dir_ip = document.getElementById("ip");
+const code = document.getElementById("qrcode");
+const boton = document.getElementById("btn_test");
+const mensajes = document.getElementById("display");
 
 
-btn_test.onclick = () => {
-    display.innerHTML += "TEST! ";
+//------ Mensajes recibidos del proceso MAIN ------
+
+//-- Información del sistema
+electron.ipcRenderer.on('informacion', (event, message) => {
+    console.log("Recibido: " + message);
+
+    //-- Extraemos cada dato
+    v_node.textContent = message[0];
+    v_chrome.textContent = message[1];
+    v_electron.textContent = message[2];
+    archi.textContent = message[3];
+    plataf.textContent = message[4];
+    direct.textContent = message[5]
+    url = ("http://" + message[6] + ":" + message[7] + "/" + message[8]);
+    dir_ip.textContent = url;
+
+    //-- Generar el codigo qr de la url
+    qrcode.toDataURL(url, function (err, url) {
+        code.src = url;
+    });
+
+});
+
+//-- Numero de usuarios
+electron.ipcRenderer.on('users', (event, message) => {
+    console.log("Recibido: " + message);
+    num_usuarios.textContent = message;
+});
+
+//-- Mensajes de los clientes
+electron.ipcRenderer.on('msg_client', (event, message) => {
+    console.log("Recibido: " + message);
+    mensajes.innerHTML += message + "<br>";
+});
+
+//------ Mensajes enviados al proceso MAIN ------
+boton.onclick = () => {
     console.log("Botón apretado!");
 
     //-- Enviar mensaje al proceso principal
-    electron.ipcRenderer.invoke('test', "MENSAJE DE PRUEBA: Boton apretado");
-}
-
-//-- Mensaje recibido del proceso MAIN
-electron.ipcRenderer.on('print', (event, message) => {
-    console.log("Recibido: " + message);
-    print.textContent = message;
-  });
+    electron.ipcRenderer.invoke('test', ">>> ESTAIS SIENDO OBSERVADOS POR UNA APP");
+};  

@@ -1,39 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Permitir sólo scripts y ficheros de la máquina local -->
-    <!-- Con esto se elimina el aviso de seguridad: Insecure Content-Security-Policy -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self';" />
+        <!-- Permitir sólo scripts y ficheros de la máquina local -->
+        <!-- Con esto se elimina el aviso de seguridad: Insecure Content-Security-Policy -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:" />
 
-    <!-- Hoja de estilo de la interfaz -->
-    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js" defer></script>
 
-    <!-- Cargar el proceso asociado a esta página -->
-    <script src="index.js" defer></script>
+        <title>Practica 4: Chat con Electron</title>
+    </head>
+    <body>
+        <h1>Chat Electron</h1>
 
-    <title>Mi APP (version 10)</title>
-</head>
-<body>
-    <h1>INTERFAZ GRÁFICA</h1>
-    <img src="logo-urjc.png" alt="Logo-URJC" width=150px>
-
-    <hr>
-    <h2>Información:</h2>
-    <ul>
-        <li>Arquitectura: <span id="info1" class="blue"></span> </li>
-        <li>Plataforma: <span id="info2" class="blue"></span></li>
-        <li>Diretorio: <span id="info3" class="blue"></span></li>
-    </ul>
-
-    <hr>
-    <p>Mensajes enviados desde el proceso main:</p>
-    <p>Print:  <span id='print' class="red"></span> </p>
-    <p>   <input type="button" value="Test" id="btn_test"> </p>
-   <p>Display:</p>
-    <p id="display"></p>
-</body>
+        <div id="left">
+            
+            <ul>
+                <h2>Información</h2>
+                <h3>Versiones utilizadas</h3>
+                <li>Version de Node: <span id="info1" class="blue"></span> </li>
+                <li>Version de Chrome: <span id="info2" class="blue"></span></li>
+                <li>Version Electron: <span id="info3" class="blue"></span></li>
+                <br>
+                <h3>Información extra</h3>
+                <li>Arquitectura: <span id="info4" class="blue"></span> </li>
+                <li>Plataforma: <span id="info5" class="blue"></span></li>
+                <li>Diretorio: <span id="info6" class="blue"></span></li>
+                <h2>Usuarios conectados</h2>
+                <p id="users"></p>
+                <h2>Dirección IP</h2>
+                <p id="ip"></p>
+                <br>
+                <p><img src="" id="qrcode"></p>
+                <br>
+            </ul>
+        </div>
+        <div id="right">
+            <h2>Pruebas</h2>
+            <p><input type="button" value="Message" id="btn_test"></p>
+            <h2>Mensajes:</h2>
+            <p id="display"></p>
+        </div>
+    </body>
 </html>
